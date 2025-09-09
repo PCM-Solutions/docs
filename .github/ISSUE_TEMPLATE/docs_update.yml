@@ -1,0 +1,26 @@
+name: 📄 Documentation Update
+description: Use this template when updating or adding documentation.
+title: "[Docs] Update: "
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to our documentation!  
+        Please follow the checklist below to ensure consistency across English and Portuguese docs.
+
+  - type: checkboxes
+    attributes:
+      label: Update Checklist
+      options:
+        - label: English documentation updated (`/en/...`)
+        - label: Portuguese documentation updated (`/pt/...`) if available
+        - label: Translation status table in `README.md` updated (✅ ⚠️ ❌)
+
+  - type: textarea
+    attributes:
+      label: Summary of Changes
+      description: Briefly describe what you updated in the documentation.
+      placeholder: "Updated API reference in en/best_practices.md and synced translation in pt/api/best_practices.md."

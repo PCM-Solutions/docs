@@ -1,0 +1,43 @@
+name: 🛠 Translation Sync Check
+
+on:
+  pull_request:
+    paths:
+      - "Docs/en/**"
+      - "Docs/pt/**"
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Detect changed files
+        id: detect
+        run: |
+          EN_CHANGED=$(git diff --name-only origin/main...HEAD | grep '^Docs/en/' | cut -d'/' -f3 | sort -u || true)
+          PT_CHANGED=$(git diff --name-only origin/main...HEAD | grep '^Docs/pt/' | cut -d'/' -f3 | sort -u || true)
+
+          echo "en_changed=$EN_CHANGED" >> $GITHUB_OUTPUT
+          echo "pt_changed=$PT_CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Update README translation status
+        run: |
+          README="Docs/README.md"
+
+          for folder in ${{ steps.detect.outputs.en_changed }}; do
+            if echo "${{ steps.detect.outputs.pt_changed }}" | grep -qw "$folder"; then
+              echo "✅ Marking $folder as Synced in README.md"
+              sed -i "s/| $folder .*|.*/| $folder          | ✅ Synced   |/" $README
+            else
+              echo "⚠️ Marking $folder as Outdated in README.md"
+              sed -i "s/| $folder .*|.*/| $folder          | ⚠️ Outdated |/" $README
+            fi
+          done
+
+      - name: Commit updated README.md
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🔄 Update translation status in README.md"
+          file_pattern: Docs/README.md

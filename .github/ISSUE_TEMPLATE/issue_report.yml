@@ -1,0 +1,65 @@
+name: Documentation / Issue Report
+description: Use this template to report issues or suggest documentation updates.
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    content: |
+      Thank you for improving our documentation! Please fill out the details below.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary of the issue
+      description: Briefly describe the problem or suggestion.
+      placeholder: "e.g., Typo in API overview section"
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed description
+      description: Provide detailed information about the issue or suggestion.
+      placeholder: "Add screenshots, links, or code snippets if applicable."
+      required: true
+
+  - type: dropdown
+    id: doc_section
+    attributes:
+      label: Which section of the docs is affected?
+      options:
+        - API
+        - Guides
+        - Projects
+        - Resources
+        - Scripts
+        - Technical
+        - Weekly Ops
+        - Other
+      description: Select the relevant documentation section.
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: Environment details (if applicable)
+      options:
+        - Operating System
+        - Browser
+        - Version
+        - Other
+      description: Include details about your environment to help reproduce issues.
+
+  - type: input
+    id: suggested_fix
+    attributes:
+      label: Suggest a fix or improvement
+      description: Optional - your proposed solution.
+      placeholder: "Optional"
+
+  - type: markdown
+    content: |
+      ---
+      **Next Steps:** A maintainer will review the issue and get back to you. Thank you for contributing!
