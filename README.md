@@ -1,30 +1,43 @@
-# 📚 PCM Solutions Documentation
+# PCM Solutions Documentation/Documentação
+[EN English Documentation](./en) | [PT Documentação em Português](./pt)
 
-[🇬🇧 English Documentation](./en) | [🇵🇹 Documentação em Português](./pt)
+Welcome to the **official documentation repository** of our organization
+Here you’ll find all the information you need about our projects, processes, and best practices
+
+Bem-vindo ao **repositório oficial de documentação** da nossa organização
+Aqui encontrará toda a informação necessária sobre os nossos projetos, processos e melhores práticas
+
+### Purpose
+This repo serves as the **central knowledge base** for our team and collaborators
+It includes technical guides, architecture decisions, API references, onboarding material, and operational documentation
+
+### Propósito
+Este repositório serve como a **base de conhecimento central** para a nossa equipa e colaboradores
+Inclui guias técnicos, decisões de arquitetura, referências de API, material de onboarding e documentação operacional
+
+
+### Languages
+- **English** is our **primary source of truth**, since we code and communicate in English for technical matters
+- **Portuguese** documentation is provided as a **translation** to support our current team and make onboarding easier
+If there is any discrepancy, the **most recently updated** version takes priority, in case of a **tie**, the **English version prevails**.
+
+### Línguas
+- **Inglês** é a nossa **fonte principal de verdade**, uma vez que programamos e comunicamos em inglês para assuntos técnicos
+- A documentação em **Português** é fornecida como **tradução** para apoiar a equipa atual e facilitar o onboarding
+Se houver alguma discrepância, a **última versão atualizada** tem prioridade, sob **empate**, a **versão inglesa prevalece**.
 
 ---
-
-Welcome to the official **documentation repository** of our organization.  
-Here you’ll find all the information you need about our projects, processes, and best practices.
-
-## 📌 Purpose
-This repo serves as the **central knowledge base** for our team and collaborators.  
-It includes technical guides, architecture decisions, API references, onboarding material, and operational documentation.
-
-## 🌍 Languages
-- **English** is our **primary source of truth**, since we code and communicate in English for technical matters.
-- **Portuguese** documentation is provided as a **translation** to support our current team and make onboarding easier.
-
-If there’s ever a mismatch, **the English version takes priority**.
-
----
-
-## 🗂 Structure
-
+## Structure
 ### Common (`/.github`)
 - [ISSUE_TEMPLATE/docs_update.yml](./.github/ISSUE_TEMPLATE/docs_update.yml) — Template when adding or updating documentation
 - [ISSUE_TEMPLATE/issue_report.yml](./.github/ISSUE_TEMPLATE/issue_report.yml) — Template for reporting errors or making suggestions
 - [workflows/translation_check.yml](./.github/workflows/translation_check.yml) — Translation sync check when committing changes
+
+### Comum (`/.github`)
+- [ISSUE_TEMPLATE/docs_update.yml](./.github/ISSUE_TEMPLATE/docs_update.yml) — Modelo para adicionar ou atualizar documentação
+- [ISSUE_TEMPLATE/issue_report.yml](./.github/ISSUE_TEMPLATE/issue_report.yml) — Modelo para reportar erros ou fazer sugestões
+- [workflows/translation_check.yml](./.github/workflows/translation_check.yml) — Verificação de sincronização de tradução ao submeter alterações
+
 
 ### English (`/en`)
 - [architecture.md](./en/architecture.md) — System architecture overview
@@ -55,38 +68,41 @@ If there’s ever a mismatch, **the English version takes priority**.
 - [weekly_ops/](./pt/weekly_ops) — Notas operacionais semanais
 
 ---
-
-## 🔄 Translation Status
-
-| Location               | Type   | Status    |
-|------------------------|--------|-----------|
-| /                      | Files  |           |
-| - architecture.md      | File   | ✅ Synced |
-| - getting_started.md   | File   | ✅ Synced |
-| /api                   | Folder | ✅ Synced |
-| /daily_ops             | Folder | ✅ Synced |
-| /guides                | Folder | ✅ Synced |
-| - best_practices.md    | File   | ✅ Synced |
-| - deployment.md        | File   | ✅ Synced |
-| /projects              | Folder | ✅ Synced |
-| /resources             | Folder | ✅ Synced |
-| /scripts               | Folder | ✅ Synced |
-| /technical             | Folder | ✅ Synced |
-| /weekly_ops            | Folder | ✅ Synced |
-
+## Translation Status
+| Location               | Type   | Status |
+|------------------------|--------|--------|
+| /                      | Files  |        |
+| - architecture.md      | File   | Synced |
+| - getting_started.md   | File   | Synced |
+| /api                   | Folder | Synced |
+| /daily_ops             | Folder | Synced |
+| /guides                | Folder | Synced |
+| - best_practices.md    | File   | Synced |
+| - deployment.md        | File   | Synced |
+| /projects              | Folder | Synced |
+| /resources             | Folder | Synced |
+| /scripts               | Folder | Synced |
+| /technical             | Folder | Synced |
+| /weekly_ops            | Folder | Synced |
 
 ### Legend
-- ✅ **Synced** – translation is up-to-date with English
-- ⚠️ **Outdated** – translation exists but needs updating
-- ❌ **Missing** – no translation available yet
+- **Synced** – translation is up-to-date
+- **Outdated** – translation exists but needs updating. Example: if the Portuguese file was changed, mark **Outdated EN** in the English file
+- **Missing** – no translation available yet
+
+### Legenda
+**Sincronizado** – a tradução está atualizada em relação ao inglês
+**Desatualizado lang** – a tradução existe, mas precisa de ser atualiada. Ex.: Alteraram o ficheiro português, devem escrever *Desatualizado EN*
+**Ausente** – ainda não existe tradução disponível
+Na tabela, **devem usar os termos em inglês!**
 
 ---
+## Contributing
+- When updating documentation, **always update the English version first**
+- Then, update the Portuguese version if it exists
+- Update the **Translation Status table** above to reflect the current state
 
-## 🚀 Contributing
-- When updating documentation, **always update the English version first**.
-- Then, update the Portuguese version if it exists.
-- Update the **Translation Status table** above to reflect the current state.
-
----
-
-## 📝 License
+## Contribuição
+- Ao atualizar a documentação, **atualize sempre primeiro a versão em inglês**
+- Em seguida, atualize a versão em português, caso exista
+- Atualize a **Tabela de Estado de Tradução** acima para refletir o estado atual
