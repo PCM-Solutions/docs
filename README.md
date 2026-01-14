@@ -94,10 +94,15 @@ Se houver alguma discrepância, a **última versão atualizada** tem prioridade,
 **Sincronizado** – a tradução está atualizada em relação ao inglês
 **Desatualizado lang** – a tradução existe, mas precisa de ser atualiada. Ex.: Alteraram o ficheiro português, devem escrever *Editado - Linhas Adicionadas: / Linhas alteradas: / Linhas removidas* no ficheiro em portugues, se ainda não fizeram a correspondente alteração no inglês. E deixar marcado "Desatualizado inglês"
 **Ausente** – ainda não existe tradução disponível
-Na tabela, **devem usar os termos em inglês!** assim como ao nomear os ficheiros, usando Snake Case (underscore em espaços e tudo minusculo)
+Na tabela, **devem usar os termos em inglês!** 
 
+---
+## Rules
+Name the folders using snake_case (underscores instead of spaces and all lowercase) and write the files in a natural way (“API Integration”), always in english
 The sufix "raw" means there is something to add or improve until the doc is considered totally usable. You might write or find "IMPROVEMENT:" to know for what is missing
 
+## Regras
+Nomear as pastas, usando Snake Case (underscore em espaços e tudo minusculo) e escrever de forma natural ("Integração API") os ficheiros, sempre em inglês
 O sufixo “raw” significa que ainda há algo a acrescentar ou melhorar até que o documento seja considerado totalmente utilizável. Deves de escrever ou encontrar "MELHORIA: para saber/indicar o que está em falta no documento
 
 ---
