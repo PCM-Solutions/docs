@@ -96,7 +96,8 @@ Se houver alguma discrepância, a **última versão atualizada** tem prioridade,
 **Ausente** – ainda não existe tradução disponível
 Na tabela, **devem usar os termos em inglês!** assim como ao nomear os ficheiros, usando Snake Case (underscore em espaços e tudo minusculo)
 
-The sufix "raw" means there is something to add or improve until the doc is considered totally usable. You might write or find "IMPROVE:" to know for what is missing
+The sufix "raw" means there is something to add or improve until the doc is considered totally usable. You might write or find "IMPROVEMENT:" to know for what is missing
+
 O sufixo “raw” significa que ainda há algo a acrescentar ou melhorar até que o documento seja considerado totalmente utilizável. Deves de escrever ou encontrar "MELHORIA: para saber/indicar o que está em falta no documento
 
 ---
