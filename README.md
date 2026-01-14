@@ -101,9 +101,45 @@ Na tabela, **devem usar os termos em inglês!**
 Name the folders using snake_case (underscores instead of spaces and all lowercase) and write the files in a natural way (“API Integration”), always in english
 The sufix "raw" means there is something to add or improve until the doc is considered totally usable. You might write or find "IMPROVEMENT:" to know for what is missing
 
+Directly identify the developer responsible for the analysis to speed up sorting and triage via search (Ctrl+F)
+- Pattern: // [Dev Name] - [Description]
+- Example: // Duarte - Analyze this race bonus calculation logic
+
+All test print logs must include the // debug tag, the filename, and the corresponding function.
+- Pattern: // debug - [FileName]: [FunctionName] - [Message]: [Value]
+- Example: Debug.Log("// debug - CheckoutController: CreateOrder - response: " + response.status);
+
+Use the // change back tag when commenting out original code during the implementation of new test logic
+
+**Documentation Duality (Academic vs. Professional)**
+Academic Style (Explanatory): Use the first-person plural ("We"). Focus on the "why" and the underlying theory
+- Ex: "Here, we implement the Factory pattern to instantiate the RPG races"
+
+Workplace Style (Operational): Use the imperative mood. Focus on the "what" and the specific action.
+- Ex: "Instantiate the selected race and apply the attribute modifiers"
+Note: If only the Workplace Style is used, ensure comments are precise and sufficient to allow for fluid reading of the code.
+
 ## Regras
 Nomear as pastas, usando Snake Case (underscore em espaços e tudo minusculo) e escrever de forma natural ("Integração API") os ficheiros, sempre em inglês
 O sufixo “raw” significa que ainda há algo a acrescentar ou melhorar até que o documento seja considerado totalmente utilizável. Deves de escrever ou encontrar "MELHORIA: para saber/indicar o que está em falta no documento
+
+Identificar diretamente o desenvolvedor responsável pela análise para agilizar a triagem via pesquisa (Ctrl+F)
+- Padrão: // [Nome do Dev] - [Descrição]
+- Exemplo: // Duarte - Analisar esta lógica de cálculo de bónus de raça.
+
+Todos os logs de impressão para teste devem conter a tag // debug, o nome do ficheiro e a função correspondente
+- Padrão: // debug - [NomeDoFicheiro]: [NomeDaFunção] - [Mensagem]: [Valor]
+- Exemplo: Debug.Log("// debug - CheckoutController: CreateOrder - response: " + response.status);
+
+Usar a tag // change back ao comentar código original durante a implementação de novas lógicas de teste
+
+**Dualidade de Documentação (Académica vs. Profissional)**
+Estilo Académico (Explicativo): Utilizar a 1ª pessoa do plural. Focado no "porquê" e na teoria
+- Ex: "Aqui implementamos o padrão Factory para instanciar as raças do RPG"
+
+Estilo de Trabalho (Operacional): Utilizar o modo imperativo. Focado no "o quê" e na ação
+- Ex: "Instancia a raça selecionada e aplica os modificadores de atributo"
+Nota: Se for usado apenas o estilo de trabalho, os comentários devem ser precisos e suficientes para a leitura fluida
 
 ---
 ## Contributing
